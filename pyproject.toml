@@ -1,0 +1,50 @@
+[project]
+name = "claude-local"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.9.2",
+    "requests>=2.32.3",
+]
+
+[tool.ruff.lint]
+select = [
+    # pydocstyle
+    "D",
+    # Google style
+    "G",
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # flake8-annotations
+    "ANN",
+]
+
+ignore = [
+    # flask8-annotations for self
+    "ANN101",
+    "ANN102",
+    "ANN204",
+    "G004",
+    "D100"
+]
+
+exclude = [
+    "*.ipynb",
+    "__init__.py"
+]
+
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
