@@ -13,5 +13,6 @@ rough notes
   - [ ] Create an ssh key pair for the instance
   - [ ] Create an IAM role for the instance
 - [ ] Define a CI/CD pipeline
+  - [ ] Configure OCID
   - [ ] Create a GitHub action to deploy the streamlit app to the EC2 instance
   - USE FARGATE?

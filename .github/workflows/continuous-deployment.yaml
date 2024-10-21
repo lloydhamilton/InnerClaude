@@ -21,12 +21,17 @@ jobs:
     steps:
     - name: Git clone the repository
       uses: actions/checkout@v3
-    - name: configure aws credentials
+    - name: Install terraform
+      uses: hashicorp/setup-terraform@v3
+    - name: Configure aws credentials
       uses: aws-actions/configure-aws-credentials@v1.7.0
       with:
         role-to-assume: ${{ secrets.ASSUME_ROLE }}
         role-session-name: GitHub_to_AWS_via_FederatedOIDC
         aws-region: ${{ env.AWS_REGION }}
-    - name: Sts GetCallerIdentity
+    - name: Terraform Init
       run: |
-        aws sts get-caller-identity
+        terraform init
+    - name: Terraform Plan
+      run: |
+        terraform plan
