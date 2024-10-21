@@ -31,6 +31,7 @@ jobs:
         aws-region: ${{ env.AWS_REGION }}
     - name: Terraform Init
       run: |
+        cd infra/terraform
         terraform init
     - name: Terraform Plan
       run: |
