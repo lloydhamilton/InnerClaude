@@ -4,12 +4,9 @@ name: Continuous Deployment
 # Controls when the action will run. Invokes the workflow on push events but only for the main branch
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 env:
-  AWS_REGION : eu-west-2 #Change to reflect your Region
+  AWS_REGION: eu-west-2 #Change to reflect your Region
 
 # Permission can be added at job level or workflow level
 permissions:
