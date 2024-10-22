@@ -5,9 +5,6 @@ name: Continuous Deployment
 on:
   push:
 
-env:
-  AWS_REGION: eu-west-2 #Change to reflect your Region
-
 # Permission can be added at job level or workflow level
 permissions:
   id-token: write   # This is required for requesting the JWT
@@ -16,7 +13,7 @@ jobs:
   TerraformPlan:
     uses: ./.github/workflows/terraform.yaml
     with:
-      region: ${{ env.AWS_REGION }}
+      region: eu-west-2
       terraform-action: plan
       terraform-directory: infra/terraform
 #  DockerBuildPush:
