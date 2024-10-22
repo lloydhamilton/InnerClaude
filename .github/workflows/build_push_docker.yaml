@@ -28,6 +28,10 @@ on:
         description: "Image tag"
         value: ${{ jobs.build-image.outputs.image_tag }}
 
+permissions:
+  id-token: write
+  contents: read
+
 env:
   AWS_REGISTRY: "124355682947.dkr.ecr.eu-west-2.amazonaws.com"
 
