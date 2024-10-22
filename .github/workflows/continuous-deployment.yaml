@@ -22,8 +22,8 @@ jobs:
       region: ${{ env.AWS_REGION }}
       terraform-action: plan
       terraform-directory: infra/terraform
-  DockerBuildPush:
-    uses: ./.github/workflows/build_push_docker.yaml
-    with:
-      docker_filepath: Dockerfile
-      repository_name: innerclaude
+#  DockerBuildPush:
+#    uses: ./.github/workflows/build_push_docker.yaml
+#    with:
+#      docker_filepath: Dockerfile
+#      repository_name: innerclaude
