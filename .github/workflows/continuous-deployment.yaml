@@ -16,12 +16,12 @@ permissions:
   id-token: write   # This is required for requesting the JWT
   contents: read    # This is required for actions/checkout
 jobs:
-#  TerraformPlan:
-#    uses: ./.github/workflows/terraform.yaml
-#    with:
-#      region: ${{ env.AWS_REGION }}
-#      terraform-action: plan
-#      terraform-directory: infra/terraform
+  TerraformPlan:
+    uses: ./.github/workflows/terraform.yaml
+    with:
+      region: ${{ env.AWS_REGION }}
+      terraform-action: plan
+      terraform-directory: infra/terraform
   DockerBuildPush:
     uses: ./.github/workflows/build_push_docker.yaml
     with:
